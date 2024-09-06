@@ -68,5 +68,7 @@ SELECT
     ROUND(SUM(rating < 3) * 100 / COUNT(*), 2) AS poor_query_percentage
 FROM 
     queries
+WHERE 
+    query_name IS NOT NULL
 GROUP BY 
     query_name
