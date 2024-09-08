@@ -79,6 +79,7 @@ LEFT JOIN
     employees AS e2
 ON
     e1.employee_id = e2.reports_to
+-- joining based on the condition that the employee_id from table e1 matches the reports_to column in table e2. This will allow us to list all employees (e2) who report to each employee (e1)
 GROUP BY 
     e1.employee_id
 HAVING 
